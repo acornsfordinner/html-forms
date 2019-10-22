@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="personal-info-form">
+        <section>
+            <label for="favorite-weekday" name="favorite-weekday">Favourite Weekday</label>
+            <select id="favorite-weekday">
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+            </select>
+        </section>
+
+        <section>
+            <label for="birth-year" name="birth-year">Birth Year</label>
+            <input type="number" id="birth-year" min="1900" max="2019" placeholder="Ex: 1980">
+        </section>
+
+        <section>
+                <label for="name" name="name">Name</label>
+                <input type="text" id="name" placeholder="Your name here" maxlength="20"></input>
+            </section>
+    
+        <section>
+                <label for="about" name="about">About Me</label>
+                <textarea id="about" placeholder="Write a short presentation of yourself" maxlength="280"></textarea>
+            </section>
+    
+        <section>
+            <label for="rabbit" name="rabbit">Rabbit</label>
+            <input type="checkbox" class="animal" id="rabbit">
+        </section>
+
+        <section>
+            <label for="human" name="human">Human</label>
+            <input type="checkbox" class="animal"  id="human">
+        </section>
+
+        <section>
+            <label for="frog" name="frog">Frog</label>
+            <input type="checkbox" class="animal"  id="frog">
+        </section>
+
+        <section>
+            <label for="dog" name="dog">Dog</label>
+            <input type="checkbox" class="animal"  id="dog">
+        </section>
+
+        <section>
+            <label for="red" name="red">Red</label>
+            <input type="radio" class="color" id="red" name="color-choice">
+        </section>
+
+        <section>
+            <label for="blue" name="blue">Blue</label>
+
+            <input type="radio" class="color" id="blue" name="color-choice">
+        </section>
+
+        <section>
+            <label for="green" name="green">Green</label>
+            <input type="radio" class="color" id="green" name="color-choice">
+        </section>
+
+        <section>
+            <button id="send-button" type="submit">Show summary</button>
+        </section>
+    </form>
+
+    <output class="personal-info-form" id="results">
+        <section id="results_about">
+            <text>about</text>
+        </section>
+
+        <section id="likes">
+
+        </section>
+
+        <button id="return-button" type="reset">Return</button>
+
+    </output>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+    <section>Enter your personal information</section>
+    <form class="login-form">
+        <section>
+            <input id="firstname" type="text" placeholder=" " required>
+            <label for="firstname" name="firstname">First Name</label>
+        </section>
+
+        <section>
+            <input id="lastname" type="text" placeholder=" " required>
+            <label for="lastname">Last Name</label>
+        </section>
+
+        <section>
+            <input id="favcolour" type="text" placeholder=" ">
+            <label for="favcolour">Favourite Colour</label>
+
+        </section>
+
+        <section>
+            <input id="favfood" type="text" placeholder=" ">
+            <label for="favfood">Favourite Food</label>
+        </section>
+
+        <section>
+            <div>
+                <span id="login-fail-msg">Invalid input</span>
+            </div>
+            <button type="submit">Login</button>
+        </section>
+    </form> -->
+
+</body>
+
+</html>

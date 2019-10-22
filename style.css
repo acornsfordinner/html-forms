@@ -1,0 +1,73 @@
+*{
+    box-sizing:border-box;
+}
+
+body {
+    display:flex;
+    flex-direction:column;
+    margin:0;
+    min-height:100vh;
+    background: linear-gradient(to top, rgb(128, 0, 80), rgb(128, 0, 200));
+    text-align:center;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    color:lightgray;
+    
+}    
+.personal-info-form section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin: 9px 0px 3px;
+}
+output{
+    display:none;
+}
+
+
+
+/*
+.login-form label{
+    transition:top 200ms, font-size 200ms, opacity 200ms;
+    position:absolute;
+    left:0;
+    top:2px;
+    opacity:0.8;
+    cursor:text;
+    user-select:none;
+    
+}
+.login-form section{
+    margin:6vh 0;
+    position:relative; //position absolute stannar här, nu förhåller sig position:absolute som finns under denna till just denna
+}
+.login-form input{
+    color: inherit;
+    background:transparent;
+    border:0px;
+    border-bottom:1px solid whitesmoke;
+}
+
+.login-form input:not(:placeholder-shown)+label{  //om placeholdern inte visas så ska labeln visas
+top:-15px;
+font-size:10px;
+}
+
+.login-form #login-fail-msg {
+    color:red;
+    font-size: 14px;
+}
+.login-form button{
+    color: lightgray;
+    background-color: rgba(109, 0, 0, 0.452);
+    border-color:transparent;
+    
+    
+    outline:0;
+}
+.login-form button:active {
+    color:white;    
+}
+}
+*/
