@@ -13,10 +13,22 @@
 </head>
 
 <body>
-    <form class="personal-info-form">
+
+
+    <form id="myForm" class="personal-info-form">
+
+        <section>
+            <label for="name" name="name">Name</label>
+            <input class="inputboxes" type="text" id="name" placeholder="Your name here" maxlength="20" required></input>
+        </section>
+
+        <section>
+            <label for="birth-year" name="birth-year">Birth Year</label>
+            <input class="inputboxes" type="number" id="birth-year" min="1900" max="2019" placeholder="Ex: 1980" required>
+        </section>
         <section>
             <label for="favorite-weekday" name="favorite-weekday">Favourite Weekday</label>
-            <select id="favorite-weekday">
+            <select class="inputboxes" id="favorite-weekday">
                 <option value="monday">Monday</option>
                 <option value="tuesday">Tuesday</option>
                 <option value="wednesday">Wednesday</option>
@@ -27,21 +39,14 @@
             </select>
         </section>
 
-        <section>
-            <label for="birth-year" name="birth-year">Birth Year</label>
-            <input type="number" id="birth-year" min="1900" max="2019" placeholder="Ex: 1980">
-        </section>
+
+
 
         <section>
-                <label for="name" name="name">Name</label>
-                <input type="text" id="name" placeholder="Your name here" maxlength="20"></input>
-            </section>
-    
-        <section>
-                <label for="about" name="about">About Me</label>
-                <textarea id="about" placeholder="Write a short presentation of yourself" maxlength="280"></textarea>
-            </section>
-    
+            <label for="about" name="about">About Me</label>
+            <textarea class="inputboxes" id="about" placeholder="Write a short presentation of yourself" maxlength="280" required></textarea>
+        </section>
+
         <section>
             <label for="rabbit" name="rabbit">Rabbit</label>
             <input type="checkbox" class="animal" id="rabbit">
@@ -49,17 +54,17 @@
 
         <section>
             <label for="human" name="human">Human</label>
-            <input type="checkbox" class="animal"  id="human">
+            <input type="checkbox" class="animal" id="human">
         </section>
 
         <section>
             <label for="frog" name="frog">Frog</label>
-            <input type="checkbox" class="animal"  id="frog">
+            <input type="checkbox" class="animal" id="frog">
         </section>
 
         <section>
             <label for="dog" name="dog">Dog</label>
-            <input type="checkbox" class="animal"  id="dog">
+            <input type="checkbox" class="animal" id="dog">
         </section>
 
         <section>
@@ -80,8 +85,12 @@
 
         <section>
             <button id="send-button" type="submit">Show summary</button>
+            <message id="login-fail-msg">Invalid input</message>
         </section>
     </form>
+
+
+
 
     <output class="personal-info-form" id="results">
         <section id="results_about">
@@ -92,8 +101,15 @@
 
         </section>
 
-        <button id="return-button" type="reset">Return</button>
+        <button id="return-button" type="button">Return</button>
 
+        <section>
+            <label for="history" name="history">History</label>
+            <select class="inputboxes" id="history" name="history">
+                <!--<option value="monday">Monday</option>-->
+
+            </select>
+        </section>
     </output>
 
 

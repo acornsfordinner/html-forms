@@ -40,10 +40,13 @@ $('.personal-info-form').on('submit', function(e){ //e==event
     e.preventDefault() //prevents the default behaviour which is RELOAD PAGE
     //kolla om minst en av rutorna är checkad
     if (!rabbit.checked && !human.checked && !frog.checked && !dog.checked){
-        alert('oi u gotta like some animal')
+        $('#login-fail-msg').css({'display':'block'})
+        $('#login-fail-msg').text('Choose at least one animal.')
+        
     }
     else if (!red.checked && !blue.checked && !green.checked){
-        alert('please tell me your favourite colour')
+        $('#login-fail-msg').css({'display':'block'})
+        $('#login-fail-msg').text('Choose a favourite colour.')
     }
     else {
 
@@ -75,21 +78,33 @@ $('.personal-info-form').on('submit', function(e){ //e==event
     else if(green.checked){
         fav_color='green'
     }
-    console.log('Fav animals: '+fav_animal+'. Fav colour: '+fav_color)
+    let summary = 'Name: '+name+' Age: '+(2019-birth_year)+' About me: '+about_text+' Favourite day: '+fav_day+' Favourite colour: '+fav_color+' Favourite animal(s): '+fav_animal
     let thisresult = 'Hello '+name+'! You must be happy today, seeing as it is '+fav_day+' today, your most favourite day!\n\nHave you met any '+fav_animal+'s today? The weather is very nice today; the sky is your favourite shade of '+fav_color+'!\n OH and by the way, HAPPY BIRTHDAY! How old are you now, you ask? '+(2019-birth_year)+' years old! I remember when we first met, and you told me: "'+about_text+'". Oh, how you have grown.'
-    results.push(thisresult)
-    console.log(thisresult)
-    $('form').hide()
+    results.push(summary)
+    console.log(summary)
+    $('#myForm').hide()
     //make output visible + print 
     $('output').css({'display':'block'})
     $('#results_about').text(thisresult)
+    $('#myForm')[0].reset()
+
+    $('#history').append($('<option>', {
+        value: summary,
+        text: name
+    }))
+    
+    $('select[name=history]').on('click', function(){
+        $('#results_about').text($(this).val())
+    })
+
 
 }
 })
-$('.personal-info-form').on('reset', function(e){
+$('#return-button').on('click', function(e){
     $('output').css({'display':'none'})
     $('#results_about').text(' ')
-    $('form').show()
+    $('#myForm').show()
+
 
 
 

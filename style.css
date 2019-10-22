@@ -15,13 +15,39 @@ body {
     color:lightgray;
     
 }    
+.inputboxes{
+    color:inherit;
+    background:rgba(255, 255, 255, 0.10);
+    border-radius:7px;
+    border: 1px groove purple;    
+}
+.animals{
+    color:inherit;
+    background:rgba(255, 255, 255, 0.10);
+    border-radius:7px;
+    border: 1px groove purple; 
+}
+
 .personal-info-form section{
     display:flex;
     flex-direction:column;
     align-items:center;
     margin: 9px 0px 3px;
 }
+button{
+    background:rgba(255, 255, 255, 0.452);
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+button:active {
+    color:grey;    
+}
 output{
+    display:none;
+}
+
+#login-fail-msg{
     display:none;
 }
 
